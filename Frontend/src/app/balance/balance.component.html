@@ -1,0 +1,35 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/viewProfile">view profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/update">Update Profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/transfer">Transfer</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/balance">Balance</button>
+    </mat-drawer>
+    <div class="cls1">
+        <h1 style="padding-top: 30px;"><b>Your balance!!!</b></h1>
+        
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                     <th>Balance</th>
+
+                </tr>
+
+            </thead>
+    
+            <tbody *ngIf="customer">       
+                    
+             
+    
+                    <td>{{customer.balance}}</td>
+
+                    <tbody  >     
+                        <button mat-raised-button color="primary" type="button" mat-button (click)="drawer.toggle()">◀️Back▶️</button>&nbsp;&nbsp;&nbsp;
+           
+                    </tbody>
+                </table>
+    </div>
+    
+</mat-drawer-container>
+

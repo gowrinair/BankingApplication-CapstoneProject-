@@ -1,0 +1,26 @@
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/viewProfile">view profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/update">Update Profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/transfer">Transfer</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/balance">Balance</button>
+     
+    </mat-drawer>
+    <div style="padding: 80px;">
+      <h1 class="content">Welcome to Bharat Bank Services</h1>
+      <p class="content" >🌈It’s been 20 years of association with bharat bank; they have been helpful to me in many 
+        of my projects. They take customer service seriously, they have advised me from time to time 
+        about my business. I proudly say that, I bank with Bharat Bank.</p>
+      <p>--Rustom Kerawalla Founder Vibgyor group of schools</p>
+      <button mat-raised-button color="accent" type="button" mat-button (click)="drawer.toggle()">Services</button>
+
+    </div>
+
+  
+    
+  
+  </mat-drawer-container>
+  <!-- <div> {{userId}}</div>
+   -->
+

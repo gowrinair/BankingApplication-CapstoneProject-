@@ -1,0 +1,37 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/viewProfile">view profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/update">Update Profile</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2" routerLink="/transfer">Transfer</button><br><br>
+    <button mat-raised-button color="accent" class="mx-2"routerLink="/balance">Balance</button>
+    </mat-drawer>
+    <div class="cls1">
+        <h1 style="padding-top: 30px;"><b>Transfer Money</b></h1>
+        <form class="example-form example-full-width" >
+      <!-- <form #form="ngForm" autocomplete="off" (ngSubmit)="transferAmount(form)"> -->
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label><b>From Account Number</b></mat-label>
+              <input matInput placeholder="From Account number" required  type="text" [(ngModel)]="acc" name="fromAccountNumber" id="fromAccountNumber">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label><b>To Account Number</b></mat-label>
+              <!-- <input matInput placeholder="Account number" required  type="number" [(ngModel)]="transfer.toAccNo" name="accountNumber" id="accountNumber"> -->
+              <input matInput placeholder="Account number" required  type="text"  name="accountNumber" id="accountNumber">
+            </mat-form-field><br>
+            <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label><b>Amount</b></mat-label><br>
+                <!-- <input matInput placeholder="Amount" required  type="number" [(ngModel)]="transfer.tAmount" name="tAmount" id="tAmount"> -->
+                <input matInput placeholder="Amount" required  type="text" name="tAmount" id="tAmount">
+              
+              </mat-form-field><br>
+              
+            <button mat-raised-button color="primary" type="button" mat-button (click)="drawer.toggle()">◀️Back</button>&nbsp;&nbsp;&nbsp;
+           
+            <button mat-flat-button   color="primary">Pay</button><br>
+           <!-- // <button mat-flat-button color="primary" (click)="transferAmount()">Pay</button> -->
+      </form>
+        <!-- </form> -->
+    </div>
+</mat-drawer-container>
+

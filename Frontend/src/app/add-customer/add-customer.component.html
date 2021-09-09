@@ -1,0 +1,160 @@
+<!-- <div class="container">
+
+    <br>
+    <h2 style="text-align:center"><b>Customer Details</b></h2>
+    <br>
+    <section id="cover">
+       
+
+             <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                <input class="form-control" type="hidden" [(ngModel)]="customer.accountNumber" name="accountNumber"  id="accountNumber">
+                </div>
+            </div> 
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" [(ngModel)]="customer.firstName"  id="firstName">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label ">Last name</label>
+                <div class="col-sm-10 ">
+                    <input class="form-control" type="text" [(ngModel)]="customer.lastName"   id="lastName">
+                </div>
+            </div>
+
+           
+
+           
+            <div class="form-group row">
+                <label class="col-sm-2"> Aadhar Number </label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text"  [(ngModel)]="customer.aadharNumber" id="aadharNumber">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"> Phone Number </label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" [(ngModel)]="customer.phoneNumber" id="phoneNumber">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2"> User Name </label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" [(ngModel)]="customer.userName" id="userName">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"> Password </label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="password" [(ngModel)]="customer.password" id="password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2"> Balance </label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" [(ngModel)]="customer.balance" id="balance" >
+                </div>
+            </div>     
+            <div class="form-group row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">BranchId</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" [(ngModel)]="bank.branchId">
+                </div>
+            </div>     
+        
+
+
+            <button (click) ="addCustomer()"  class="btn btn-success" 
+                style="width:80px; height:40px; float:right; margin-right: 2%"  id="add-customer-form" >Add</button>
+
+
+
+
+
+            <button type="button" class="btn btn-primary" 
+                style="width:80px; height:40px; float:left; margin-left: 20%">Back</button>
+       
+    </section>
+
+</div> -->
+
+
+
+
+
+<div style="text-align: center;" class="cls1">
+    <h1 style="padding-top: 20px;"><b>Customer-Registration</b></h1>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>First Name</b></mat-label>
+          <input matInput placeholder="Enter Your First Name" required  type="text" [(ngModel)]="customer.firstName"  id="firstName">
+          <mat-hint>Hint:Aline</mat-hint>
+        </mat-form-field>
+      </p><br>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>Last Name</b></mat-label>
+          <input matInput placeholder="Enter Your Last Name" required type="text" [(ngModel)]="customer.lastName"   id="lastName">
+          <mat-hint>Hint:Mathew</mat-hint>
+        </mat-form-field>
+      </p><br>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>Phone Number</b></mat-label>
+          <input matInput placeholder="Enter Your Phone Number"  required type="text"  [(ngModel)]="customer.phoneNumber" id="phoneNumber" >
+          <mat-hint>Hint:9446980665</mat-hint>
+        </mat-form-field>
+      </p><br>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>Aadhaar Number</b></mat-label>
+          <input matInput placeholder="Enter Your Aadhaar Number" required type="text" [(ngModel)]="customer.aadharNumber" id="aadharNumber">
+          <mat-hint>Hint:7076567865456</mat-hint>
+        </mat-form-field>
+      </p><br>
+
+      <mat-form-field appearance="fill">  
+        <mat-label><b>Branches</b></mat-label>  
+        <select matNativeControl required [(ngModel)]="bank.branchId" id="branchId" required>  
+          <!-- <option value="">Select</option>   -->
+          <option value=1>TRIVANDRUM</option>  
+          <option value=2>BANGLORE</option>  
+          <option value=4>ERNAKULAM</option>  
+          <option value=5>HYDERABAD</option>  
+        </select>  
+      </mat-form-field> <br>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>User Name</b></mat-label>
+          <input matInput placeholder="Enter Your User Name" required type="text" [(ngModel)]="customer.userName" id="userName">
+        </mat-form-field>
+      </p>
+
+    <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label><b>Password</b></mat-label>
+        <input matInput type="password" placeholder="Enter Your Password" required [(ngModel)]="customer.password" id="password">
+    </mat-form-field><br>
+
+    <mat-form-field class="example-full-width"  required appearance="fill" >
+        <mat-label><b>Confirm Password</b></mat-label>
+        <input matInput type="password">
+    </mat-form-field><br>
+
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label><b>Initial Deposit</b></mat-label>
+          <input matInput placeholder="Enter Your First Deposit" type="text" required [(ngModel)]="customer.balance" id="balance" >
+         
+        </mat-form-field>
+      </p><br>
+
+    <button mat-flat-button (click) ="addCustomer()"  color="primary">Register</button><br>
+</div>

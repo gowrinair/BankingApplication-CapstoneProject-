@@ -1,0 +1,21 @@
+
+    <div class="container">
+      <div class="header">
+      <nav>
+        <img src="../assets/Bharat.jpeg" alt="BharatLogo" class="logo">&nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" routerLink="/home" routerLinkActive="active" class="mx-2">Home</button>
+        <button mat-raised-button color="primary" routerLink="/register" routerLinkActive="active" class="mx-2">Register</button>
+        <button mat-raised-button color="primary" routerLink="/login" routerLinkActive="active" class="mx-2">Login</button>
+        <button mat-raised-button color="primary" routerLink="/about" routerLinkActive="active" class="mx-2">About</button>
+        <button mat-raised-button color="primary" (click)="logout()" routerLink="/login" routerLinkActive="active" class="mx-2">Log Out</button>
+      </nav>
+      </div>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="footer">
+        <h2>Web designed and developed by......</h2>
+      </div>
+    </div>
+    
+    
